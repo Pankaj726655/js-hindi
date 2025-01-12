@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pankaj</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    
+</body>
+
+<script>
+    const div = document.createElement("H1")
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random()*10+1)
+    div.setAttribute("title", "Pankaj Pandey")
+    div.style.color = "orange"
+    div.style.backgroundColor = "white"
+    // div.innerText = "Pankaj Pandey" // first get the text then change 
+    const addText = document.createTextNode("Pankaj Pandey") // direct save the text 
+    div.appendChild(addText)
+    document.body.appendChild(div)
+</script>
+</html>

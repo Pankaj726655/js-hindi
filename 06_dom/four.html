@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | DOM</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+
+    // Add Element
+    //  ***************   Generic way : innerHTML traverse whole tree then insert, it is not goog if we have mnore numbers of elements to add.
+    function addLanguage(langName){
+        const li = document.createElement("li")
+        li.innerHTML = `${langName}`
+        document.querySelector(".language").appendChild(li)
+    }
+    addLanguage("Java")
+    addLanguage("Python")
+
+    //  ***************  Optimise way : createTextNode does not traverse all the tree
+    function optimizedWay(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    optimizedWay("CSS")
+    optimizedWay("rubel")
+
+    // Edit  ====================>>>>>>>>>>>
+
+        // const target = document.querySelector("li:nth-child(2)")
+        // // target.innerHTML = "Mojo"
+        // const newli = document.createElement("li")
+        // newli.textContent = "Scala"
+        // target.replaceWith(newli)
+
+    //  edit
+        // const firstLang = document.querySelector("li:first-child")
+        // firstLang.outerHTML = "<li>Pankaj</li>"
+
+    // edit
+        function editText(targetChild, insertData){
+            const target = document.querySelector(`li:nth-child(${targetChild})`)
+            const newli = document.createElement("li")
+            newli.textContent = insertData
+            target.replaceWith(newli)
+        }
+        editText(3, "Java")
+        editText(4, "HTML")
+
+    // REMOVE......................
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
