@@ -1,5 +1,5 @@
-const place = ["delhi", "mumbai", "agra"]
-const temple = ["ram", "hanuman", "laksmi"]
+// const place = ["delhi", "mumbai", "agra"]
+// const temple = ["ram", "hanuman", "laksmi"]
 
 // place.push(temple)
 // console.log(place);
@@ -15,7 +15,7 @@ const temple = ["ram", "hanuman", "laksmi"]
 
 console.log(Array.isArray("Pankaj"))
 console.log(Array.from("Pankaj"))
-console.log(Array.from({name:"Pankaj"})) // intrst
+console.log(Array.from({name:"Pankaj"})) // intsrst
 
 let score1 = 100
 let score2 = 200

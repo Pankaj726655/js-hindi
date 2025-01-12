@@ -15,8 +15,8 @@ const JsUser = {
     loc: "Jaipur"
 }
 
-console.log(JsUser.name)            //  way 1
-console.log(JsUser["fullname"])     //  way 2
+// console.log(JsUser.name)            //  way 1
+// console.log(JsUser["fullname"])     //  way 2
 
-console.log(JsUser[mySymbol]) 
+// console.log(JsUser[mySymbol]) 
  

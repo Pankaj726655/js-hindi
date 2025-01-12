@@ -25,7 +25,7 @@ const myArray = [0,1,2,3,4,5]
 
 // ****************  slice && splice  **************
 
-console.log("initial Array", myArray)
+// console.log("initial Array", myArray)
 
 const myn1 = myArray.slice(1,3)     // it does not make effect on original array
 console.log(myn1)
