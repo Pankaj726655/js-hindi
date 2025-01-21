@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image List</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <h1>Image List</h1>
+    <ul id="images">
+        <li>
+            <img id="image1" src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=200" width="200" alt="Mountain landscape">
+        </li>
+        <li>
+            <img id="image2" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=200" width="200" alt="City skyline">
+        </li>
+        <li>
+            <img id="image3" src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?w=200" width="200" alt="Beach with waves">
+        </li>
+        <li>
+            <img id="image4" src="https://images.unsplash.com/photo-1482784160316-6eb046863ece?w=200" width="200" alt="Autumn forest">
+        </li>
+        <li>
+            <img id="image5" src="https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=200" width="200" alt="Sunrise over the hills">
+        </li>
+        <li>
+            <img id="image6" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=200" width="200" alt="Books on a wooden shelf">
+        </li>
+        <li>
+            <img id="image7" src="https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?w=200" width="200" alt="Abstract art painting" >
+        </li>
+        <li ><a href="https://google.com" id="google" style="color: aqua;">Google</a></li>
+    </ul>
+</body>
+
+<script>
+//  onClick 
+// const btn1 = document.getElementById("image9").onclick = function(){
+//     alert("clicked")
+// }
+
+//  attachEvent : on internet explorer
+// JQuery : onClick
+
+// type, timestamp, defaultPrevented, target, toElement, srcElement, currentTargrt
+// clientX, clientY, screenX, screenY, 
+// altKey, cntrlKey, shiftKey, keyCode
+
+//  addEventListener
+// EventPropagation
+
+// document.getElementById("image9").addEventListener('click', function(e){
+//     console.log("click on image");
+//     e.stopPropagation()   //stop propagaion : not go to above element
+// }, false)
+
+// document.getElementById("images").addEventListener('click', function(e){
+//     console.log("click in ul");
+// }, false)
+
+// document.getElementById("google").addEventListener("click", function(e){
+//     e.preventDefault()
+//     e.stopPropagation()
+//     console.log("google clicked")
+// })
+
+const allImage = document.querySelector("#images").addEventListener("click", function(e){
+    console.log(e.target.parentNode)
+    if(e.target.tagName === "IMG"){
+        let removeItem = e.target.parentNode
+        removeItem.remove()
+        // removeItem.parentNode.removeChild(removeItem) // alternate way
+    }
+}, false)
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav>
+
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script src="chaiaurcode.js"></script>
+  </body>
+  <script>
+    let intervalId;
+const colorArray = ['green', 'yellow', 'grey', 'white', 'orange'];
+
+function changeColor(colorArray) {
+  document.querySelector('body').style.backgroundColor =
+    colorArray[Math.floor(Math.random() * 5)];
+  console.log('running');
+}
+
+function start() {
+  if (!intervalId) {
+    intervalId = setInterval(changeColor(colorArray), 100);
+    console.log('start');
+  }
+}
+
+function stop() {
+  clearInterval(intervalId);
+  intervalId = null;
+  console.log('stop');
+}
+
+document.getElementById('start').addEventListener('click', start);
+document.getElementById('stop').addEventListener('click', stop);
+
+  </script>
+</html>

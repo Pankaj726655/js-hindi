@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <H1>Project 1</H1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+</body>
+
+<script>
+    let intervalId;
+const colorArray = ['green', 'yellow', 'grey', 'white', 'orange'];
+
+function changeColor() {
+  document.body.style.backgroundColor =
+    colorArray[Math.floor(Math.random() * 5)];
+  console.log('running');
+}
+
+function start() {
+  if (!intervalId) {
+    intervalId = setInterval(changeColor, 100);
+    console.log('start');
+  }
+}
+
+function stop() {
+  clearInterval(intervalId);
+  intervalId = null;
+  console.log('stop');
+}
+
+document.getElementById('start').addEventListener('click', start);
+document.getElementById('stop').addEventListener('click', stop);
+
+</script>
+</html>
